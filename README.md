@@ -4,7 +4,7 @@ This project was created to help shed light on the number of conferences and peo
 
 ## Getting Started
 
-Go to...
+Go to..
 
 
 ## Contributing
