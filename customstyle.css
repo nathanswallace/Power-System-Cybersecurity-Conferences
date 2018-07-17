@@ -3,6 +3,6 @@ menusidebarcustom {
   width:200px;
 }
 
-pagecontentcustom {
-  margin-left: 200px;
+div.pagecontentcustom {
+  margin-left: 200px
 }
