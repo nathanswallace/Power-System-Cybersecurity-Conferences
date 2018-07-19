@@ -97,7 +97,7 @@ def EventsUpdate():
             ####### TO DO - Come back and adjust target. Open extenal link in new tab. Open internal link in same window.
             #Check to see if the app will contain an internal link to the event page or redirect to the main event's website.
             if row['InternalLink'] == 'Yes':
-                link = "/Power-System-Cybersecurity-Conferences-Papers/events/"+row["EventID"]+'/'#getpath("../events/"+row["EventID"]+'/')
+                link = "/Power-System-Cybersecurity-Conferences-Papers/events/"+row["EventID"]+'/event.html'#getpath("../events/"+row["EventID"]+'/')
                 SetupEventPage(row)
             insertTable += '<tr class="item"><td><a href="%s" target="_blank">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (link,row['Name'],row['Started'],row['Type'],row['Category'],row['Published'],row['Recorded'])
 
