@@ -47,6 +47,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
   <table id="myTable" class="w3-table-all">
+    <tr>
+      <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(1)')" style="cursor:pointer">Name</th>
+      <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(2)')" style="cursor:pointer">Year Started</th>
+      <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')" style="cursor:pointer">Type</th>
+      <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')" style="cursor:pointer">Category</th>
+      <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')" style="cursor:pointer">Published</th>
+      <th onclick="w3.sortHTML('#myTable', '.item', 'td:nth-child(3)')" style="cursor:pointer">Recorded</th>
+    </tr>
     <tr class="item"><td><a href="/Power-System-Cybersecurity-Conferences-Papers/events/1/event.html" target="_blank">IEEE Power & Energy Society (PES) General Meeting</a></td><td>?</td><td>A</td><td>E&S T V</td><td>Yes</td><td>Yes</td></tr>
 <tr class="item"><td><a href="/Power-System-Cybersecurity-Conferences-Papers/events/2/event.html" target="_blank">IEEE Power & Energy Society (PES) T&D Conference</a></td><td>?</td><td>A</td><td>E&S T V</td><td>Yes</td><td>Yes</td></tr>
 <tr class="item"><td><a href="http://www.distributech.com/index.html" target="_blank">DistribuTECH Conference & Exhibition</a></td><td>?</td><td>A</td><td>E&S T V</td><td>No</td><td>No</td></tr>
@@ -96,7 +104,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 // get the table element
 var $table = document.getElementById("myTable"),
 // number of rows per page
-$n = 5,
+$n = 10,
 // number of rows of the table
 $rowCount = $table.rows.length,
 // get the first cell's tag name (in the first row)
