@@ -44,6 +44,7 @@ def SetupEventPage(row):
                     line = line.replace(i, j)
                 line = line.replace('[tag_papers]', insertTable)
                 fout.write(line)
+    return TotalPapers
 
     # #Iterate over each file in the Event's (EventID) folder
     # for file in os.listdir(getpath("CSV_Files"+row["EventID"]+'/')):
@@ -96,10 +97,11 @@ def EventsUpdate():
             link = row['Link']
             ####### TO DO - Come back and adjust target. Open extenal link in new tab. Open internal link in same window.
             #Check to see if the app will contain an internal link to the event page or redirect to the main event's website.
+            count = '?'
             if row['InternalLink'] == 'Yes':
                 link = "/Power-System-Cybersecurity-Conferences-Papers/events/"+row["EventID"]+'/event.html'#getpath("../events/"+row["EventID"]+'/')
-                SetupEventPage(row)
-            insertTable += '<tr class="item"><td><a href="%s" target="_blank">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (link,row['Name'],row['Started'],row['Type'],row['Category'],row['Published'],row['Recorded'])
+                count = SetupEventPage(row)
+            insertTable += '<tr class="item"><td><a href="%s" target="_blank">%s</a></td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>\n' % (link,row['Name'],row['Started'],row['Type'],row['Category'],row['Published'],row['Recorded'], str(count))
 
     #Copies insertTable into the proper place in the index.html file identified by [tag_events]
     with open(getpath("HTML_Templates/index.html"), 'r') as indexTemp:
